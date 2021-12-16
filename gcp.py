@@ -5,7 +5,7 @@ def hello_gcs(event, context):
     fileName = file['name']
     try:
          storage_client = storage.Client()
-         destination_bucket_name = 'cis4010-malobaidbackup'
+         destination_bucket_name = 'backupbucket'
          src_bucket = storage_client.bucket(bucket)
          destination_bucket = storage_client.bucket(destination_bucket_name)
          src_object = src_bucket.blob(fileName)
